@@ -1,1 +1,2 @@
-require("keseljevicjovan")
+require("keseljevicjovan.core")
+require("keseljevicjovan.lazy")
