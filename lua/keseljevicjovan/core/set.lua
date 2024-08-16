@@ -13,11 +13,18 @@ vim.opt.undofile = true
 
 vim.opt.termguicolors = true
 
+-- Transparency
 vim.cmd [[
-  highlight Normal guibg=none
-  highlight NonText guibg=none
-  highlight Normal ctermbg=none
-  highlight NonText ctermbg=none
+    augroup MyColors
+        autocmd!
+        autocmd ColorScheme * highlight Normal guibg=none
+        autocmd ColorScheme * highlight NonText guibg=none
+        autocmd ColorScheme * highlight SignColumn guibg=none
+        autocmd ColorScheme * highlight StatusLine guibg=none
+        autocmd ColorScheme * highlight StatusLineNC guibg=none
+        autocmd ColorScheme * highlight LineNr guibg=none
+        autocmd ColorScheme * highlight VertSplit guibg=none
+    augroup END
 ]]
 
 -- vim.opt.colorcolumn = "80"
