@@ -12,18 +12,18 @@ return {
 
         local builtin = require('telescope.builtin')
 
-        -- Project
+        -- Navigation
         vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
         vim.keymap.set('n', '<leader>pg', builtin.live_grep, {})
         vim.keymap.set('n', '<leader>po', builtin.oldfiles, {})
-        
+
         -- Git
         vim.keymap.set('n', '<leader>gb', builtin.git_branches, {})
         vim.keymap.set('n', '<leader>gs', builtin.git_status, {})
         vim.keymap.set('n', '<leader>gc', builtin.git_commits, {})
-       
+
         -- Colorscheme
-        vim.keymap.set('n', '<leader>c', builtin.colorscheme, {})
+        vim.keymap.set('n', '<leader>cc', builtin.colorscheme, {})
 
         -- Man
         vim.keymap.set('n', '<leader>m', function()
@@ -34,7 +34,7 @@ return {
 
         -- History
         -- vim.keymap.set('n', '<leader>s', builtin.search_history, {})
-        
+
         -- Registers
         -- vim.keymap.set('n', '<leader>r', builtin.registers, {})
     end

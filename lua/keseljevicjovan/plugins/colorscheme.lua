@@ -4,7 +4,7 @@ return {
         vim.cmd("colorscheme gruvbox")
 
         require('gruvbox').setup({
-            contrast = "hard",  
+            contrast = "hard",
             transparent_mode = true,
         })
     end
