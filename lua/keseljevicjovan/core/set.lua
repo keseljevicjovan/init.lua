@@ -27,5 +27,13 @@ vim.cmd [[
     augroup END
 ]]
 
+-- Auto-compile groff to PDF
+vim.api.nvim_create_augroup("AutoCompileGroffGroup", { clear = true })
+vim.api.nvim_create_autocmd("BufWritePost", {
+  group = "AutoCompileGroffGroup",
+  pattern = {"*.ms", "*.me", "*.man", "*.groff"},
+  command = "silent !groff -Tpdf -ms % > %<.pdf"
+})
+
 -- vim.opt.colorcolumn = "80"
 -- vim.opt.guicursor = ""
