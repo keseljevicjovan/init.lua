@@ -1,9 +1,9 @@
 vim.opt.nu = true
 vim.opt.rnu = true
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
 vim.opt.swapfile = false
@@ -12,6 +12,7 @@ vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
 vim.opt.termguicolors = true
+vim.opt.showmode = false
 
 -- Transparency
 vim.cmd [[
@@ -32,7 +33,7 @@ vim.api.nvim_create_augroup("AutoCompileGroffGroup", { clear = true })
 vim.api.nvim_create_autocmd("BufWritePost", {
   group = "AutoCompileGroffGroup",
   pattern = {"*.ms", "*.me", "*.man", "*.groff"},
-  command = "silent !groff -Tpdf -ms % > %<.pdf"
+  command = "silent !groff -Tpdf -ms -Kutf8 % > %<.pdf"
 })
 
 -- vim.opt.colorcolumn = "80"
