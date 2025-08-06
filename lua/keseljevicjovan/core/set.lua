@@ -8,7 +8,7 @@ vim.opt.expandtab = true
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undodir = os.getenv("HOME") .. "/.cache/nvim/undodir"
 vim.opt.undofile = true
 
 vim.opt.termguicolors = true
@@ -16,16 +16,16 @@ vim.opt.showmode = false
 
 -- Transparency
 vim.cmd [[
-    augroup MyColors
-        autocmd!
-        autocmd ColorScheme * highlight Normal guibg=none
-        autocmd ColorScheme * highlight NonText guibg=none
-        autocmd ColorScheme * highlight SignColumn guibg=none
-        autocmd ColorScheme * highlight StatusLine guibg=none
-        autocmd ColorScheme * highlight StatusLineNC guibg=none
-        autocmd ColorScheme * highlight LineNr guibg=none
-        autocmd ColorScheme * highlight VertSplit guibg=none
-    augroup END
+  augroup MyColors
+    autocmd!
+    autocmd ColorScheme * highlight Normal guibg=none
+    autocmd ColorScheme * highlight NonText guibg=none
+    autocmd ColorScheme * highlight SignColumn guibg=none
+    autocmd ColorScheme * highlight StatusLine guibg=none
+    autocmd ColorScheme * highlight StatusLineNC guibg=none
+    autocmd ColorScheme * highlight LineNr guibg=none
+    autocmd ColorScheme * highlight VertSplit guibg=none
+  augroup END
 ]]
 
 -- Auto-compile groff to PDF

@@ -8,15 +8,5 @@ return {
       }
       vim.cmd.colorscheme("gruvbox")
     end,
-  },
-  --[[{
-    "shaunsingh/nord.nvim",
-    config = function()
-      require("nord").set {
-        borders = true,
-        disable_background = true,
-        transparent_mode = true,
-      }
-    end,
-  },]]--
+  }
 }
