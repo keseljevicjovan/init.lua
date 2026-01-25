@@ -26,7 +26,7 @@ return {
     require("mason").setup()
     require("mason-lspconfig").setup({
       ensure_installed = {
-        "lua_ls", "clangd", "intelephense"
+        "lua_ls", "clangd", "intelephense", 'html', 'cssls'
       },
       handlers = {
         function(server_name) -- default handler (optional)

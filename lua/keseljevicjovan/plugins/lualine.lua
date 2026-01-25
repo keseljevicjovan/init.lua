@@ -4,6 +4,7 @@ return {
   config = function()
     require('lualine').setup {
       options = {
+        always_show_tabline = false,
         theme = {
           normal = {
             a = { fg = '#282828', bg = '#b16286' },

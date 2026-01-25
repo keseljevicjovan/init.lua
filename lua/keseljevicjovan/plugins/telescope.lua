@@ -1,14 +1,21 @@
 return {
   "nvim-telescope/telescope.nvim",
 
-  tag = "0.1.8",
-
   dependencies = {
     "nvim-lua/plenary.nvim"
   },
 
   config = function()
-    require('telescope').setup({})
+    require('telescope').setup({
+      defaults = {
+        borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+        winblend = 0,
+        prompt_prefix = " > ",
+        selection_caret = "❯ ",
+        entry_prefix = "  ",
+
+      },
+    })
 
     local builtin = require('telescope.builtin')
 
@@ -21,21 +28,5 @@ return {
     vim.keymap.set('n', '<leader>gb', builtin.git_branches, {})
     vim.keymap.set('n', '<leader>gs', builtin.git_status, {})
     vim.keymap.set('n', '<leader>gc', builtin.git_commits, {})
-
-    -- Colorscheme
-    vim.keymap.set('n', '<leader>cc', builtin.colorscheme, {})
-
-    -- Man
-    vim.keymap.set('n', '<leader>m', function()
-      builtin.man_pages({
-        sections = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "n", "l", "p" }
-      })
-    end, {})
-
-    -- History
-    -- vim.keymap.set('n', '<leader>s', builtin.search_history, {})
-
-    -- Registers
-    -- vim.keymap.set('n', '<leader>r', builtin.registers, {})
   end
 }

@@ -24,3 +24,11 @@ vim.keymap.set("t", "<C-t>", [[<C-\><C-n>]])
 -- Useful
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- Tabs
+vim.keymap.set("n", "tn", ":tabnew<CR>")
+vim.keymap.set("n", "tq", ":tabclose<CR>")
+vim.keymap.set("n", "tk", "gt")
+vim.keymap.set("n", "tj", "gT")
+
+for i = 1, 9 do vim.keymap.set("n", "t"..i, i.."gt") end
