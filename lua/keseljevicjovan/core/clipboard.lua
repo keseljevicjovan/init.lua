@@ -16,8 +16,6 @@ if is_ssh_session() then
       ['*'] = require('vim.ui.clipboard.osc52').paste('*'),
     },
   }
-  vim.keymap.set({"n","v"}, "Y", '"+y')
-  vim.keymap.set({"n","v"}, "P", '"+p')
-else
-  vim.opt.clipboard = "unnamedplus"
+  vim.keymap.set({"n", "v"}, "Y", '"+y')
+  vim.keymap.set({"n", "v"}, "P", '"+p')
 end
